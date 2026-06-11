@@ -1,0 +1,14 @@
+# Netlify config — MUST live at the repo root (Netlify reads it from there).
+# The Next.js app is in the webgui/ subfolder, so we point `base` at it; all
+# build commands then run inside webgui/. The @netlify/plugin-nextjs plugin
+# detects the framework and wires up the publish dir + serverless functions,
+# so we deliberately do NOT hardcode `publish`.
+[build]
+  base = "webgui"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
