@@ -30,11 +30,13 @@ export default function Console({
   attempts,
   status,
   maxAttempts,
+  allowAnalysis = false,
 }: {
   scenario: Scenario;
   attempts: number;
   status: ScenarioStatus;
   maxAttempts: number;
+  allowAnalysis?: boolean;
 }) {
   const router = useRouter();
   const req = scenario.req;
@@ -43,6 +45,9 @@ export default function Console({
   const [analyzed, setAnalyzed] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
+  // Gate analysis is only meaningful when permitted (practice / test account);
+  // for everyone else it stays off no matter what.
+  const effAnalyzed = analyzed && allowAnalysis;
 
   const [provider, setProvider] = useState("");
   const [sensor, setSensor] = useState("");
@@ -236,16 +241,22 @@ export default function Console({
         {/* ===== catalog ===== */}
         <section className={styles.catalogHead}>
           <h2 className={styles.h2}>SATELLITE PROVIDER CATALOG</h2>
-          <button
-            className={styles.analyzeBtn}
-            onClick={() => setAnalyzed((v) => !v)}
-          >
-            {analyzed ? "◼ HIDE GATE ANALYSIS" : "▶ RUN CONSTRAINT ANALYSIS"}
-          </button>
+          {allowAnalysis ? (
+            <button
+              className={styles.analyzeBtn}
+              onClick={() => setAnalyzed((v) => !v)}
+            >
+              {effAnalyzed ? "◼ HIDE GATE ANALYSIS" : "▶ RUN CONSTRAINT ANALYSIS"}
+            </button>
+          ) : (
+            <span className={`tag ${styles.analyzeLocked}`}>
+              MANUAL TASKING · evaluate the gates yourself
+            </span>
+          )}
         </section>
 
         <AnimatePresence>
-          {analyzed && (
+          {effAnalyzed && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -274,7 +285,7 @@ export default function Console({
               p={p}
               index={i}
               req={req}
-              analyzed={analyzed}
+              analyzed={effAnalyzed}
               selected={selected === p.id}
               disabled={formDisabled}
               onTask={() => useProvider(p)}
