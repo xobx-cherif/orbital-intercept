@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Starfield from "./Starfield";
+import CompletionModal from "./CompletionModal";
 import { MAX_ATTEMPTS, type ScenarioStatus } from "@/lib/constants";
 import styles from "./dashboard.module.css";
+import completionStyles from "./completion.module.css";
 
 export type DashScenario = {
   id: string;
@@ -37,6 +39,21 @@ export default function Dashboard({
 
   const solved = scenarios.filter((s) => s.status === "solved").length;
   const skipped = scenarios.filter((s) => s.status === "skipped").length;
+
+  // "Finished the game" = every assigned scenario is resolved (none still open).
+  const allDone =
+    scenarios.length > 0 && scenarios.every((s) => s.status !== "open");
+
+  const [showCert, setShowCert] = useState(false);
+  // Auto-prompt the certificate once per browser when the board is completed.
+  useEffect(() => {
+    if (!allDone) return;
+    const key = `oi_cert_prompted_${username}`;
+    if (typeof window !== "undefined" && !sessionStorage.getItem(key)) {
+      sessionStorage.setItem(key, "1");
+      setShowCert(true);
+    }
+  }, [allDone, username]);
 
   async function logout() {
     setLoggingOut(true);
@@ -83,6 +100,25 @@ export default function Dashboard({
           </p>
         </section>
 
+        {allDone && (
+          <motion.section
+            className={completionStyles.completeBanner}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <div className={completionStyles.completeText}>
+              ◆ <b>MISSION COMPLETE</b> — you cleared all {scenarios.length}{" "}
+              assigned scenarios, solving <b>{solved}/{scenarios.length}</b>.
+            </div>
+            <button
+              className={completionStyles.claimBtn}
+              onClick={() => setShowCert(true)}
+            >
+              CLAIM YOUR CERTIFICATE ▾
+            </button>
+          </motion.section>
+        )}
+
         <section className={styles.grid}>
           {scenarios.map((s, i) => (
             <ScenarioCard key={s.id} s={s} index={i} />
@@ -116,6 +152,16 @@ export default function Dashboard({
           </span>
         </footer>
       </main>
+
+      <AnimatePresence>
+        {showCert && (
+          <CompletionModal
+            operator={username}
+            scenarios={scenarios}
+            onClose={() => setShowCert(false)}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }

@@ -1,0 +1,192 @@
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(2, 5, 10, 0.78);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal {
+  width: min(520px, 100%);
+  border: 1px solid var(--cyan);
+  box-shadow: 0 0 60px rgba(88, 231, 255, 0.22);
+  overflow: hidden;
+}
+
+/* UAE-flag accent strip across the top */
+.flagStrip {
+  display: flex;
+  height: 12px;
+}
+.fRed {
+  width: 25%;
+  background: #ce1126;
+}
+.fBands {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.fGreen {
+  flex: 1;
+  background: #009639;
+}
+.fWhite {
+  flex: 1;
+  background: #ffffff;
+}
+.fBlack {
+  flex: 1;
+  background: #000000;
+}
+
+.body {
+  padding: 26px 26px 24px;
+}
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--green);
+  text-align: center;
+}
+.title {
+  font-family: var(--font-hud);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 0.02em;
+  color: var(--ice);
+  text-align: center;
+  margin: 6px 0 12px;
+  text-shadow: 0 0 22px rgba(88, 231, 255, 0.35);
+}
+.sub {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--txt);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.score {
+  color: var(--cyan);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--cyan-dim);
+}
+.input {
+  font-family: var(--font-hud);
+  font-size: 17px;
+  color: var(--ice);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(88, 231, 255, 0.25);
+  padding: 12px 14px;
+  outline: none;
+  transition: all 0.16s ease;
+}
+.input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 16px rgba(88, 231, 255, 0.25);
+  background: rgba(0, 0, 0, 0.6);
+}
+.input::placeholder {
+  color: var(--txt-faint);
+}
+.error {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.secondary {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ice);
+  background: transparent;
+  border: 1px solid rgba(88, 231, 255, 0.3);
+  padding: 11px 16px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.secondary:hover:not(:disabled) {
+  background: rgba(88, 231, 255, 0.1);
+}
+.primary {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--void);
+  background: var(--cyan);
+  border: none;
+  padding: 11px 18px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  box-shadow: 0 0 20px rgba(88, 231, 255, 0.4);
+}
+.primary:hover:not(:disabled) {
+  background: #7ff0ff;
+  box-shadow: 0 0 30px rgba(88, 231, 255, 0.7);
+}
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* dashboard completion banner */
+.completeBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  margin-bottom: 26px;
+  border: 1px solid var(--green);
+  background: rgba(87, 242, 164, 0.07);
+}
+.completeText {
+  font-size: 14px;
+  color: var(--ice);
+}
+.completeText b {
+  color: var(--green);
+}
+.claimBtn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--void);
+  background: var(--green);
+  border: none;
+  padding: 11px 18px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  box-shadow: 0 0 20px rgba(87, 242, 164, 0.4);
+}
+.claimBtn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 30px rgba(87, 242, 164, 0.7);
+}
