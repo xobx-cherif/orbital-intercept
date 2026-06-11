@@ -284,5 +284,24 @@
       "s08",
       "s09"
     ]
+  },
+  {
+    "username": "testuser",
+    "salt": "745e29dceed0f54ca27506d1d8b5af54",
+    "hash": "28109c844cb804a9aef60e6d2396b4c5dda74d354108fb0d4440bf3bb3bbf67f",
+    "scenarios": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07",
+      "s08",
+      "s09",
+      "s10",
+      "s11",
+      "s12"
+    ]
   }
 ]
