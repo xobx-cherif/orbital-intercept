@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+.netlify/
+.DS_Store
+*.log
+
+# Instructor handout — plaintext passwords & expected flags. NEVER commit.
+ROSTER.md
+credentials.csv
+
+# Local env (secrets). Set these in the Netlify UI for production.
+.env*.local

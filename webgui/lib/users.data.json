@@ -1,0 +1,288 @@
+[
+  {
+    "username": "operator01",
+    "salt": "bdac7c76229a120f94e48cdbb97d29bc",
+    "hash": "855b8550791000eed059ceb308ab232edb5f55f0e23c97671af7b6e22567f358",
+    "scenarios": [
+      "s01",
+      "s02",
+      "s03",
+      "s04"
+    ]
+  },
+  {
+    "username": "operator02",
+    "salt": "31ab744831c94fc3e8abe840ed809f50",
+    "hash": "ce14b85cde653036aa4e0cc170bd3aaabd6dd4a9af49e7d6b64cf21e028f3b4a",
+    "scenarios": [
+      "s06",
+      "s07",
+      "s08",
+      "s09"
+    ]
+  },
+  {
+    "username": "operator03",
+    "salt": "abdb3245e9d7a9e6b38afc49e8327092",
+    "hash": "c31d63538394ef2bbbe2ccc368e70fb0236911d415adfc801feade51f1b05b27",
+    "scenarios": [
+      "s11",
+      "s12",
+      "s01",
+      "s02"
+    ]
+  },
+  {
+    "username": "operator04",
+    "salt": "2096c95c59743b6678cb943db988263a",
+    "hash": "823f6e3d94cec3f4815cdaaec63c08da1662deea0de08b5351bfd93887d77baf",
+    "scenarios": [
+      "s04",
+      "s05",
+      "s06",
+      "s07"
+    ]
+  },
+  {
+    "username": "operator05",
+    "salt": "94140af7b1ff9586677848be864c974a",
+    "hash": "8350c60293e905dd7fc5c9d00eb402313aa36619bde3b72aba73707cd54b1e97",
+    "scenarios": [
+      "s09",
+      "s10",
+      "s11",
+      "s12"
+    ]
+  },
+  {
+    "username": "operator06",
+    "salt": "fafe27c3709669a26d646f6332e3aee5",
+    "hash": "b6ada14cfe283e4d88c256563db29b878355fcb6961f845b60985ec8b79d2242",
+    "scenarios": [
+      "s02",
+      "s03",
+      "s04",
+      "s05"
+    ]
+  },
+  {
+    "username": "operator07",
+    "salt": "a56dbc9f1f0af53c67419b1dca8e7145",
+    "hash": "1ffa8375b920a5e3694903ae85502f561d2d2f5722736e9bd4bcf8a40be70716",
+    "scenarios": [
+      "s07",
+      "s08",
+      "s09",
+      "s10"
+    ]
+  },
+  {
+    "username": "operator08",
+    "salt": "35c17e32769dba0ab54e614ee3cd514a",
+    "hash": "f3b72cc733b07e2f9226ed025cf78f38df16fbe918937e11ae211a49ff5368fe",
+    "scenarios": [
+      "s12",
+      "s01",
+      "s02",
+      "s03"
+    ]
+  },
+  {
+    "username": "operator09",
+    "salt": "0962b814d8a0bec3549874dea1d59259",
+    "hash": "6b69229b3b73c9e40a1b9055b0243351f3adbecaa102d9c6a33293bed5a4b5a5",
+    "scenarios": [
+      "s05",
+      "s06",
+      "s07",
+      "s08"
+    ]
+  },
+  {
+    "username": "operator10",
+    "salt": "a3f850a8283b704459f863696ffdd7a5",
+    "hash": "0dca7943f480a033ad1be724497c33924c4569c67e6abcc75edab1f43940a84d",
+    "scenarios": [
+      "s10",
+      "s11",
+      "s12",
+      "s01"
+    ]
+  },
+  {
+    "username": "operator11",
+    "salt": "c508064d0f86b6974606c53839ff9edd",
+    "hash": "ea5716c4e1247a482807adc32d5bec59d151aa0613d0052fd30a98af6da13d85",
+    "scenarios": [
+      "s03",
+      "s04",
+      "s05",
+      "s06"
+    ]
+  },
+  {
+    "username": "operator12",
+    "salt": "bf0c66f9d55427d3ebfeb861ef2d1580",
+    "hash": "15c89a868c256639b1e2d9f06929acc71faf2255e1b6ed4bd2ed1a34f1e962cd",
+    "scenarios": [
+      "s08",
+      "s09",
+      "s10",
+      "s11"
+    ]
+  },
+  {
+    "username": "operator13",
+    "salt": "90012aa69ab49012b9b1f11d45194b73",
+    "hash": "1785354907228af2df24ea9cb3751efff9d182298cc74c41b94c3f557af3328f",
+    "scenarios": [
+      "s01",
+      "s02",
+      "s03",
+      "s04"
+    ]
+  },
+  {
+    "username": "operator14",
+    "salt": "8c8ffaec9226e994230def4710f41194",
+    "hash": "ca49be45538f9ab2e29b2d7e07eecf693dd090cc6fff2aac74e363a401654e4c",
+    "scenarios": [
+      "s06",
+      "s07",
+      "s08",
+      "s09"
+    ]
+  },
+  {
+    "username": "operator15",
+    "salt": "6d6a047ee0b9d6bee9d554fc1013304a",
+    "hash": "7eecfe7d4b7c78181b0b3ced1249e9ee73a7b37a4997b12f59f07b20235ad384",
+    "scenarios": [
+      "s11",
+      "s12",
+      "s01",
+      "s02"
+    ]
+  },
+  {
+    "username": "operator16",
+    "salt": "c0d85a513a24b5519d5bdbe7fb5c1127",
+    "hash": "10a72529a1950e218291f8567acc67164fe9115365ed893e77fb47fd5336c8fa",
+    "scenarios": [
+      "s04",
+      "s05",
+      "s06",
+      "s07"
+    ]
+  },
+  {
+    "username": "operator17",
+    "salt": "7bcd131adc14f15384abd40e7153364a",
+    "hash": "f444cd37bcf85ea90e2d304572eee4c8bf36f6f7467c619d643e1a39af087974",
+    "scenarios": [
+      "s09",
+      "s10",
+      "s11",
+      "s12"
+    ]
+  },
+  {
+    "username": "operator18",
+    "salt": "3139180cb93912968d84753c592925ca",
+    "hash": "1bc43dd5838b8bdadb3db864f3f4c4e6049c26a0b5bb19d14928cbb9b8a7c4af",
+    "scenarios": [
+      "s02",
+      "s03",
+      "s04",
+      "s05"
+    ]
+  },
+  {
+    "username": "operator19",
+    "salt": "43e3121c4a8ab9f6532851d28b1f8eb0",
+    "hash": "c6a3b8b15cb625cb6c2e679e7597dea86a0b2bb539da6279e9fa10c228c3502d",
+    "scenarios": [
+      "s07",
+      "s08",
+      "s09",
+      "s10"
+    ]
+  },
+  {
+    "username": "operator20",
+    "salt": "19fddf6fcbe06b9ecbd56a77bd0ccc6b",
+    "hash": "fb250fff959e738895f06aa8fe1d1b27faf8d1dbaed1f1c078802327f3525d6f",
+    "scenarios": [
+      "s12",
+      "s01",
+      "s02",
+      "s03"
+    ]
+  },
+  {
+    "username": "operator21",
+    "salt": "34af80c49916197b17876020e4433ed2",
+    "hash": "279bb7bbb855529da74ad43dfa4442b6a439612817c11ff6f52da389937db325",
+    "scenarios": [
+      "s05",
+      "s06",
+      "s07",
+      "s08"
+    ]
+  },
+  {
+    "username": "operator22",
+    "salt": "2e5fd015b1b2c8023d0e6c7d05faa58c",
+    "hash": "fa26b2191e4ac8e9c06f5bd02a65ddca4af220da6193b486e9fd40fef03e5587",
+    "scenarios": [
+      "s10",
+      "s11",
+      "s12",
+      "s01"
+    ]
+  },
+  {
+    "username": "operator23",
+    "salt": "5d735d755333f0fc1b6cf39d9ac513ab",
+    "hash": "4080e034b5f04f982b2abb112c972b2235aaf07b7617062232e720afc847d2ad",
+    "scenarios": [
+      "s03",
+      "s04",
+      "s05",
+      "s06"
+    ]
+  },
+  {
+    "username": "operator24",
+    "salt": "8abcff781371373cbe4843acd32c7bad",
+    "hash": "84023e115dcd724c0444adf27681e759b7ac9cbe02bcfc2bb2359c243d86e3bf",
+    "scenarios": [
+      "s08",
+      "s09",
+      "s10",
+      "s11"
+    ]
+  },
+  {
+    "username": "operator25",
+    "salt": "a917e3cd41d0f0d826b9fc3676635218",
+    "hash": "08302c9c556d02096d48bd9de4549eb77eebfe7cf4fdedb58c74273e02142938",
+    "scenarios": [
+      "s01",
+      "s02",
+      "s03",
+      "s04"
+    ]
+  },
+  {
+    "username": "operator26",
+    "salt": "8ceba9228e583afb0a120f2e349033a8",
+    "hash": "a3f96ee85fa62f443759686699f3a5bb175c665b3ebde06360f06a9258726b3b",
+    "scenarios": [
+      "s06",
+      "s07",
+      "s08",
+      "s09"
+    ]
+  }
+]

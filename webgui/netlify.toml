@@ -1,0 +1,14 @@
+# Netlify config for the Orbital Intercept tasking range.
+# This file lives inside the app folder (webgui/). In the Netlify UI set the
+# site's "Base directory" to `webgui` — Netlify then reads THIS file and the
+# paths below are relative to webgui/.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Runs Next.js (App Router + API routes) on Netlify Functions.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

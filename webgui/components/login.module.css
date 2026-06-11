@@ -1,0 +1,112 @@
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 40px 22px;
+}
+
+.brand {
+  text-align: center;
+}
+.brandTitle {
+  font-family: var(--font-hud);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 0.08em;
+  color: var(--ice);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.brandTitle span {
+  color: var(--cyan);
+  text-shadow: 0 0 16px rgba(88, 231, 255, 0.5);
+}
+.brandSub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--txt-dim);
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.card {
+  width: min(420px, 100%);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.head {
+  margin-bottom: 4px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--cyan-dim);
+}
+.input {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--ice);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(88, 231, 255, 0.25);
+  padding: 12px 13px;
+  outline: none;
+  transition: all 0.16s ease;
+}
+.input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 16px rgba(88, 231, 255, 0.25);
+  background: rgba(0, 0, 0, 0.6);
+}
+.input::placeholder {
+  color: var(--txt-faint);
+}
+.submit {
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--void);
+  background: var(--cyan);
+  border: none;
+  padding: 13px 22px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  box-shadow: 0 0 20px rgba(88, 231, 255, 0.4);
+}
+.submit:hover:not(:disabled) {
+  background: #7ff0ff;
+  box-shadow: 0 0 30px rgba(88, 231, 255, 0.7);
+}
+.submit:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.error {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--red);
+  border: 1px solid rgba(255, 93, 108, 0.4);
+  background: rgba(255, 93, 108, 0.07);
+  padding: 10px 12px;
+}
+.hint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--txt-faint);
+  text-align: center;
+}

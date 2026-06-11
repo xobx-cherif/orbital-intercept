@@ -1,0 +1,27 @@
+{
+  "name": "orbital-intercept-webgui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 1234",
+    "prebuild": "node scripts/check-scenarios.mjs",
+    "build": "next build",
+    "start": "next start -p 1234",
+    "lint": "next lint",
+    "check:scenarios": "node scripts/check-scenarios.mjs",
+    "gen:roster": "node scripts/gen-roster.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "11.3.8",
+    "next": "^14.2.33",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.7.0",
+    "@types/node": "20.14.13",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.5.4"
+  }
+}

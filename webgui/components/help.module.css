@@ -1,0 +1,239 @@
+/* ===================== help overlay ===================== */
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(2, 5, 10, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.modal {
+  width: min(1080px, 100%);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--cyan);
+  box-shadow: 0 0 60px rgba(88, 231, 255, 0.18);
+}
+
+.modalHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--panel-edge);
+  flex: 0 0 auto;
+}
+.modalTitle {
+  font-family: var(--font-hud);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.16em;
+  color: var(--ice);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.modalTitle span {
+  color: var(--cyan);
+  text-shadow: 0 0 14px rgba(88, 231, 255, 0.5);
+}
+.closeBtn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--ice);
+  background: transparent;
+  border: 1px solid rgba(88, 231, 255, 0.3);
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.closeBtn:hover {
+  background: rgba(255, 93, 108, 0.12);
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+/* ---- left nav ---- */
+.nav {
+  border-right: 1px solid var(--panel-edge);
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+.navItem {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: var(--txt-dim);
+  background: transparent;
+  border: 1px solid transparent;
+  border-left: 2px solid transparent;
+  padding: 11px 12px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.navItem:hover {
+  color: var(--ice);
+  background: rgba(88, 231, 255, 0.05);
+}
+.navItemActive {
+  color: var(--cyan);
+  background: rgba(88, 231, 255, 0.08);
+  border-left-color: var(--cyan);
+}
+.navIdx {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--txt-faint);
+}
+
+/* ---- right content ---- */
+.content {
+  padding: 24px 28px;
+  overflow-y: auto;
+}
+.stageWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.stage {
+  position: relative;
+  height: 230px;
+  background: rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(88, 231, 255, 0.12);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stageGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(88, 231, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 231, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.topicTitle {
+  font-family: var(--font-hud);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: var(--ice);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.topicReq {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--cyan);
+  border: 1px solid rgba(88, 231, 255, 0.3);
+  padding: 2px 8px;
+  letter-spacing: 0.06em;
+}
+.what {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--txt);
+  max-width: 70ch;
+}
+.what b {
+  color: var(--cyan);
+}
+.impact {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--txt-dim);
+  padding: 12px 14px;
+  background: rgba(255, 181, 71, 0.05);
+  border-left: 2px solid var(--amber);
+}
+.impact b {
+  color: var(--amber);
+  letter-spacing: 0.04em;
+}
+
+.footHint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--txt-faint);
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid var(--panel-edge);
+  flex: 0 0 auto;
+}
+
+/* help button in top bar */
+.helpTrigger {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--amber);
+  background: rgba(255, 181, 71, 0.08);
+  border: 1px solid rgba(255, 181, 71, 0.45);
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  text-transform: uppercase;
+}
+.helpTrigger:hover {
+  background: rgba(255, 181, 71, 0.18);
+  box-shadow: 0 0 14px rgba(255, 181, 71, 0.3);
+}
+
+/* tiny caption inside animation stage */
+.cap {
+  position: absolute;
+  bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--txt-dim);
+}
+.capLeft {
+  left: 12px;
+}
+.capRight {
+  right: 12px;
+}
+
+@media (max-width: 720px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--panel-edge);
+  }
+  .navItem {
+    flex: 0 0 auto;
+  }
+}

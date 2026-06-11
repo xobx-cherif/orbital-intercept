@@ -1,0 +1,20 @@
+# Node / Next
+node_modules/
+.next/
+out/
+.netlify/
+*.log
+.DS_Store
+
+# Local env secrets — set these in the Netlify UI instead. NEVER commit.
+.env
+.env.*
+!.env.example
+
+# Instructor handouts — plaintext passwords & expected flags. NEVER commit.
+ROSTER.md
+credentials.csv
+
+# Python
+__pycache__/
+*.pyc
